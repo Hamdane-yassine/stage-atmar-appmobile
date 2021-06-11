@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+
+        <item android:title="Produits">
+            <menu>
+                <item
+                    android:id="@+id/nav_products_1"
+                    android:title="Outils à disques" >
+                </item>
+                <item
+                    android:id="@+id/nav_products_2"
+                    android:title="Outils à dents" >
+                </item>
+                <item
+                    android:id="@+id/nav_products_3"
+                    android:title="Matériels à traitements" >
+                </item>
+                <item
+                    android:id="@+id/nav_products_4"
+                    android:title="Divers" >
+                </item>
+            </menu>
+        </item>
+        <item android:title="Communication">
+            <menu>
+                <item
+                    android:id="@+id/nav_contact"
+                    android:title="Contact" />
+                <item
+                    android:id="@+id/nav_presentation"
+                    android:title="Présentation" />
+            </menu>
+        </item>
+    </group>
+</menu>
