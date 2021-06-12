@@ -1,6 +1,9 @@
 package ma.atmar.AppAtmar.HelperClasses;
 
-public class Produits {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Produits implements Serializable {
     int id;
     String title , description;
 

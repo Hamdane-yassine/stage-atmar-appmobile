@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,8 +22,17 @@ public class ProductFragment extends Fragment {
     RecycleAdapter adapter;
     RecyclerView rv;
     ArrayList<Produits> arr;
+    String cat;
     Context con;
+    FragmentManager fm;
 
+    public void setFramentManager(FragmentManager fm) {
+        this.fm = fm;
+    }
+    public void setCat(String cat)
+    {
+        this.cat=cat;
+    }
     public void setProducts(ArrayList<Produits> arr) {
         this.arr = arr;
     }
@@ -43,7 +53,7 @@ public class ProductFragment extends Fragment {
     private void featuredRecycle() {
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        adapter = new RecycleAdapter(this.arr,this.con);
+        adapter = new RecycleAdapter(this.arr,this.con,this.fm,this.cat);
         rv.setAdapter(adapter);
     }
 }

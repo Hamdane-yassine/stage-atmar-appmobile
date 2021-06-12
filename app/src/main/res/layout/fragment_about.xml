@@ -1,12 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="chat Fragment"
-        android:textSize="30sp" />
-</RelativeLayout>
+    android:background="#EEEFFF">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="222dp"
+                android:layout_height="134dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+
+                android:text="Fort d’une expérience de plus de 70 ans dans la fabrication de matériels agricoles de labour, remorques agraires, citernes, disques de labour et bétonnière, LES ATELIERS MAROCAINS sont à même de satisfaire tous vos besoins en qualité et en quantité. Cette expérience nous permet de vous offrir une qualité de tout premier ordre grâce aux moyens techniques et humains dont nous disposons et au sérieux qui caractérise notre société et qui en a fait sa renommée.
+
+La société a été crée en 1947 par un groupe d’industriels français, et a débuté dans la fabrication de petits matériels à traction animale qui sont toujours produits à nos jours.
+
+Le statut juridique et économique du Maroc à l’époque du protectorat; la mentalité des responsables et celle des utilisateurs n’était guère en ce temps favorable à l’éclosion d’une industrie.
+
+Mais avec persévérance et ténacité, les premiers matériels furent fabriqués en très petites séries.
+La société a par la suite connue un développement normal, et a connue plusieurs phases transitoires, comme les différents agrandissements des ateliers et les différentes augmentation du capital.
+"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                app:layout_constraintVertical_bias="0.161" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

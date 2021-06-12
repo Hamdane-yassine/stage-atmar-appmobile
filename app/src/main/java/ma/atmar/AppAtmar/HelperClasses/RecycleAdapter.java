@@ -1,6 +1,7 @@
 package ma.atmar.AppAtmar.HelperClasses;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -17,15 +19,22 @@ import org.jetbrains.annotations.NotNull;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+import ma.atmar.AppAtmar.MainActivity;
+import ma.atmar.AppAtmar.ProductFragment;
+import ma.atmar.AppAtmar.Productdetails;
 import ma.atmar.AppAtmar.R;
 
 public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.FeaturedViewHolder>
 {
     ArrayList<Produits> products;
     Context con;
-    public RecycleAdapter(ArrayList<Produits> products, Context con) {
+    FragmentManager mf;
+    String cat;
+    public RecycleAdapter(ArrayList<Produits> products, Context con,FragmentManager mf,String cat) {
+        this.mf=mf;
         this.products = products;
         this.con=con;
+        this.cat=cat;
     }
 
     @NonNull
@@ -46,7 +55,9 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Featured
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Intent i = new Intent(con, Productdetails.class);
+                    i.putExtra("produit", ra);
+                    con.startActivity(i);
                 }
             });
 

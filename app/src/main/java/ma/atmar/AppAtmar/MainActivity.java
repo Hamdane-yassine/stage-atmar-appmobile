@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             pf = new ProductFragment();
             pf.setProducts(db.getProducts("outil_dis"));
             pf.setContext(this);
+            pf.setCat("outil_dis");
+            pf.setFramentManager(getSupportFragmentManager());
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,pf).commit();
             navigationView.setCheckedItem(R.id.nav_products_1);
         }
@@ -49,24 +51,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 pf = new ProductFragment();
                 pf.setProducts(db.getProducts("outil_dis"));
                 pf.setContext(this);
+                pf.setCat("outil_dis");
+                pf.setFramentManager(getSupportFragmentManager());
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,pf).commit();
                 break;
             case  R.id.nav_products_2:
                 pf = new ProductFragment();
                 pf.setProducts(db.getProducts("outil_dan"));
                 pf.setContext(this);
+                pf.setCat("outil_dan");
+                pf.setFramentManager(getSupportFragmentManager());
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,pf).commit();
                 break;
             case R.id.nav_products_3:
                 pf = new ProductFragment();
                 pf.setProducts(db.getProducts("mat"));
                 pf.setContext(this);
+                pf.setCat("mat");
+                pf.setFramentManager(getSupportFragmentManager());
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,pf).commit();
                 break;
             case R.id.nav_products_4:
                 pf = new ProductFragment();
                 pf.setProducts(db.getProducts("div"));
                 pf.setContext(this);
+                pf.setCat("div");
+                pf.setFramentManager(getSupportFragmentManager());
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,pf).commit();
                 break;
             case R.id.nav_presentation:
